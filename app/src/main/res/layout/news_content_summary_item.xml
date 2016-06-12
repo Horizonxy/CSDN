@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="4dp"
+        android:padding="@dimen/small_margin"
+        android:paddingTop="@dimen/normal_margin"
+        android:text=""
+        android:textSize="@dimen/large_size" />
+
+</com.zhy.autolayout.AutoLinearLayout>

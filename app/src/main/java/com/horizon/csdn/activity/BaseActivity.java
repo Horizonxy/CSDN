@@ -1,6 +1,7 @@
 package com.horizon.csdn.activity;
 
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 import com.horizon.csdn.Application;
 import com.horizon.csdn.R;
 import com.horizon.csdn.util.SystemStatusManager;
+import com.mikepenz.iconics.IconicsDrawable;
+import com.mikepenz.material_design_iconic_typeface_library.MaterialDesignIconic;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.zhy.autolayout.AutoLayoutActivity;
 
@@ -25,10 +28,8 @@ public class BaseActivity extends AutoLayoutActivity {
     TextView tvTitle;
     @Bind(R.id.btn_left)
     ImageView btnLeft;
-    @Bind(R.id.btn_right1)
-    ImageView btnRight1;
-    @Bind(R.id.btn_right2)
-    ImageView btnRight2;
+    @Bind(R.id.btn_right)
+    ImageView btnRight;
 
     FrameLayout layoutContent;
 
@@ -71,6 +72,18 @@ public class BaseActivity extends AutoLayoutActivity {
             title = "";
         }
         tvTitle.setText(title);
+    }
+
+    public void setBtnLeft(MaterialDesignIconic.Icon icon){
+        if(btnLeft != null) {
+            btnLeft.setImageDrawable(new IconicsDrawable(this).color(Color.WHITE).icon(icon));
+        }
+    }
+
+    public void setBtnRight(MaterialDesignIconic.Icon icon){
+        if(btnRight != null) {
+            btnRight.setImageDrawable(new IconicsDrawable(this).color(Color.WHITE).icon(icon));
+        }
     }
 
     @Override

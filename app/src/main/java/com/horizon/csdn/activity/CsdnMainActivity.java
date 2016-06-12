@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import com.horizon.csdn.R;
 import com.horizon.csdn.adapter.CsdnTabAdapter;
 import com.horizon.csdn.widget.RectViewPagerIndicator;
+import com.mikepenz.material_design_iconic_typeface_library.MaterialDesignIconic;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,6 +28,7 @@ public class CsdnMainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_csdn_main);
         setTitle("SCDN资讯");
+        setBtnLeft(MaterialDesignIconic.Icon.gmi_fire);
 
         mNewsPager.setAdapter(mAdapter = new CsdnTabAdapter(TITLES, getSupportFragmentManager()));
 

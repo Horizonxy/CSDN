@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.horizon.csdn.Application;
 import com.horizon.csdn.R;
 import com.horizon.csdn.adapter.CsdnListAdapter;
 import com.horizon.csdn.adapter.quickadapter.MultiItemTypeSupport;
@@ -109,6 +110,7 @@ public class CsdnTypeListFragment extends Fragment {
         new LoadDataTask().execute();
     }
 
+
     class AutoLoadListener implements AutoLoadListView.OnAutoLoadListener {
 
         @Override
@@ -140,7 +142,7 @@ public class CsdnTypeListFragment extends Fragment {
                 mData.clear();
             }
 
-            if(NetUtils.isNetworkConnected(getContext())) {
+            if(NetUtils.isNetworkConnected(Application.getInstance())) {
                 List<NewsItem> list = mNewsItemBiz.getNewsItems(mType, mPageNo);
                 if (list != null && !list.isEmpty()) {
                     mData.addAll(list);
