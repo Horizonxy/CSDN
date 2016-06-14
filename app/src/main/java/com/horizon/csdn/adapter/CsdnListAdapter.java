@@ -31,7 +31,7 @@ public class CsdnListAdapter extends QuickAdapter<NewsItem> {
         }
         helper.setText(R.id.tv_title, item.getTitle() == null ? "" : item.getTitle())
                 .setText(R.id.tv_content, item.getContent() == null ? "" : item.getContent())
-                .setText(R.id.tv_time, item.getDate() == null ? "" : item.getContent())
+                .setText(R.id.tv_time, item.getDate() == null ? "" : item.getDate())
                 .setOnClickListener(R.id.item_layout, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

@@ -1,6 +1,7 @@
 package com.horizon.csdn.fragment;
 
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.text.TextUtils;
@@ -74,6 +75,9 @@ public class CsdnTypeListFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_csdn_type_list, container, false);
 
         mListView = (InitializeListView) view.findViewById(R.id.news_page_list);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            mListView.getListView().setNestedScrollingEnabled(true);
+        }
         mListView.setAutoLoadListener(new AutoLoadListener());
         mListView.setDivider(getResources().getColor(R.color.background), 2);
         mListView.setAdapter(mAdapter = new CsdnListAdapter(getContext(), mData = new ArrayList<NewsItem>(), new MultiItemTypeSupport<NewsItem>() {

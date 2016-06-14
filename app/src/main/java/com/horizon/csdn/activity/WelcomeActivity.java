@@ -33,7 +33,7 @@ public class WelcomeActivity extends Activity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                startActivity(new Intent(WelcomeActivity.this, CsdnMainActivity.class));
+                startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
                 overridePendingTransition(R.anim.slide_in_right, R.anim.fade_out);
                 finish();
             }

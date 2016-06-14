@@ -23,6 +23,11 @@ public class CsdnTabAdapter extends FragmentPagerAdapter {
     }
 
     @Override
+    public CharSequence getPageTitle(int position) {
+        return mTitles.get(position);
+    }
+
+    @Override
     public Fragment getItem(int position) {
         return new CsdnTypeListFragment().newInstance(position + 1);
     }
